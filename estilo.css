@@ -1,0 +1,30 @@
+:root {
+  --bg: #f7f5fa; --papel: #ffffff; --fg: #1d1824; --sub: #6b6377; --linha: #e4dfeb; --acento: #c2347e;
+  --display: "Segoe UI Semibold", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --texto: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #110e17; --papel: #18141f; --fg: #eee9f5; --sub: #a59cb3; --linha: #2c2537; --acento: #ff6fb3; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg); font-family: var(--texto); font-size: 16px; line-height: 1.65;
+  padding: 40px max(16px, env(safe-area-inset-right, 0px)) 64px max(16px, env(safe-area-inset-left, 0px));
+}
+.folha { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+header { display: flex; flex-direction: column; gap: 6px; }
+.app { font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: 13px; color: var(--acento); }
+h1 { font-family: var(--display); font-size: clamp(28px, 5vw, 36px); line-height: 1.15; margin: 0; }
+.data { color: var(--sub); font-size: 14px; }
+nav { display: flex; gap: 10px; flex-wrap: wrap; }
+nav a { color: var(--fg); text-decoration: none; border: 1px solid var(--linha); border-radius: 999px; padding: 6px 14px; font-size: 14px; background: var(--papel); }
+nav a:hover, nav a:focus-visible, nav a[aria-current] { border-color: var(--acento); color: var(--acento); outline: none; }
+section { background: var(--papel); border: 1px solid var(--linha); border-radius: 14px; padding: 28px clamp(18px, 4vw, 36px); }
+h2 { font-family: var(--display); font-size: 22px; margin: 0 0 6px; }
+h3 { font-family: var(--display); font-size: 17px; margin: 22px 0 4px; }
+p, li { max-width: 65ch; margin: 0 0 10px; }
+ul { padding-left: 20px; margin: 0 0 10px; }
+.resumo { color: var(--sub); }
+code { font-size: 14px; background: var(--bg); padding: 1px 6px; border-radius: 6px; }
+a { color: var(--acento); }
+footer { color: var(--sub); font-size: 13px; text-align: center; }
